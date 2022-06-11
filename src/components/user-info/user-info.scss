@@ -1,0 +1,35 @@
+.user-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: var(--borderRadius);
+  height: 50px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: var(--spacing);
+
+  &__name {
+    padding: 0 var(--spacing);
+    font-size: var(--fontSizeMedium);
+    font-weight: 700;
+
+    @media only screen and (max-width: 1366px) {
+      padding: 0 var(--mobileSpacing);
+    }
+  }
+
+  &__img {
+    --size: 50px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    img {
+      border-radius: var(--borderRadius);
+      height: 100%;
+      width: auto;}
+  }
+}

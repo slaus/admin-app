@@ -1,0 +1,30 @@
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing);
+
+  @media only screen and (max-width: 1366px) {
+    margin-bottom: var(--mobileSpacing);
+    padding-right: 0;
+  }
+
+  &__toggle {
+    --size: 30px;
+    width: var(--size);
+    height: var(--size);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+
+    @media only screen and (max-width: 1366px) {
+      display: flex;
+    }
+
+    i {
+      font-size: 2.5rem;
+      color: var(--mainColor);
+    }
+  }
+}

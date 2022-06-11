@@ -1,0 +1,22 @@
+.progress-bar {
+  height: 6px;
+  background-color: var(--bodyBg);
+  border-radius: 2.5px;
+
+  &__inner {
+    border-radius: 2.5px;
+    height: 100%;
+
+    &.begin {
+      background-color: var(--green);
+    }
+
+    &.normal {
+      background-color: var(--purple);
+    }
+
+    &.high {
+      background-color: var(--red);
+    }
+  }
+}

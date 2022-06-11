@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing);
+  font-size: 1rem;
+
+  &__item ~ &__item {
+    margin-left: 10px;
+  }
+
+  &__item {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &.active,
+    &.active:hover {
+      background-color: var(--mainColor);
+      color: var(--white);
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      color: var(--mainColor);
+      background-color: var(--white);
+      transition: all .3s ease-in-out;
+    }
+  }
+}

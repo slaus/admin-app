@@ -1,0 +1,17 @@
+.line-chart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+
+  &__title {
+    font-weight: 700;
+    font-size: var(--fontSizeMedium);
+  }
+
+  &__value {
+    font-size: var(--fontSizeLarge);
+    font-weight: 700;
+  }
+}

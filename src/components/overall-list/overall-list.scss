@@ -1,0 +1,39 @@
+.overall-list {
+  & > * ~ * {
+    margin-top: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      --size: 50px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background-color: var(--bodyBg);
+      margin-right: var(--spacing);
+
+      i {
+        font-size: 1.5rem;
+        color: var(--black);
+      }
+    }
+
+    &__info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+
+      .title {
+        color: var(--mainColor);
+      }
+    }
+  }
+}

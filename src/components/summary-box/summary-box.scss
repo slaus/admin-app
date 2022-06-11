@@ -1,0 +1,38 @@
+.summary-box {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  &__chart {
+    width: 40%;
+
+    &__value {
+      font-weight: 700;
+    }
+  }
+
+  &__info {
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &__title {
+      font-size: var(--fontSizeMedium);
+      font-weight: 700;
+      line-height: 1.2;
+
+      span {
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+
+    &__value {
+      font-weight: 700;
+      font-size: var(--fontSizeLarge);
+      color: var(--black);
+    }
+  }
+}

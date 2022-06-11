@@ -1,0 +1,139 @@
+.sidebar {
+  position: fixed;
+  width: var(--sideBarWidth);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--txtColor);
+  top: 0;
+  z-index: 100;
+  padding: 30px 0;
+
+  @media only screen and (max-width: 1366px) {
+    width: 100vw;
+    background-color: var(--mainColor);
+    color: var(--white);
+    z-index: 1;
+  }
+
+
+  &__logo {
+    display: flex;
+    height: var(--sideBarLogoHeight);
+
+    @media only screen and (max-width: 1366px) {
+      width: 100vw;
+      justify-content: space-between;
+      height: 80px;
+      padding: 0 var(--mobileSpacing);
+      margin-bottom: var(--mobileSpacing);
+    }
+
+    img {
+      --size: 50px;
+      width: var(--size);
+      height: var(--size);
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    display: none;
+
+    i {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 1366px) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: var(--spacing);
+
+    &__item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 10px 20%;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        color: var(--mainColor);
+        text-decoration: none;
+
+        @media only screen and (max-width: 1366px) {
+          color: var(--orange);
+        }
+      }
+
+      &.active {
+        font-weight: 500;
+        color: var(--mainColor);
+
+        @media only screen and (max-width: 1366px) {
+          color: var(--orange);
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 5px;
+          left: 0;
+          top: 0;
+          background: var(--mainColor);
+        }
+      }
+
+      &:last-child {
+        margin-top: auto;
+        color: var(--mainColor);
+
+        @media only screen and (max-width: 1366px) {
+          color: var(--orange);
+        }
+      }
+
+      &__icon {
+        --size: 25px;
+        width: var(--size);
+        height: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2.5rem;
+
+        @media only screen and (max-width: 1366px) {
+          margin-right: 1rem;
+        }
+
+        i {
+          font-size: 1.7rem;
+        }
+      }
+
+      &__txt {
+        display: flex;
+        align-items: center;
+        width: 150px;
+      }
+    }
+  }
+}
+
+.sidebar-open .sidebar__menu__item {
+
+  @media only screen and (max-width: 1366px) {
+    transition: all .3s ease-in-out;
+    justify-content: flex-start;
+    padding: 10px 5%;
+  }
+}

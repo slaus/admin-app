@@ -1,0 +1,34 @@
+.revenue-list {
+  & > * ~ * {
+    margin-top: var(--spacing);
+  }
+
+  &__item {
+
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: var(--fontSizeMedium);
+      margin-top: var(--spacing);
+      //color: var(--mainColor);
+
+      span {
+        font-weight: 700;
+
+        &.begin {
+          color: var(--green);
+        }
+
+        &.normal {
+          color: var(--purple);
+        }
+
+        &.high {
+          color: var(--red);
+        }
+      }
+    }
+  }
+}

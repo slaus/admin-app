@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Dashboard",
+    "link": "/",
+    "name": "dashboard",
+    "icon": "bx bxs-dashboard"
+  },
+  {
+    "title": "Help",
+    "link": "/help",
+    "name": "help",
+    "icon": "bx bx-help-circle"
+  },
+  {
+    "title": "Members",
+    "link": "/members",
+    "name": "members",
+    "icon": "bx bx-group"
+  },
+  {
+    "title": "Payments",
+    "link": "/payments",
+    "name": "payments",
+    "icon": "bx bx-wallet"
+  },
+  {
+    "title": "Localization",
+    "link": "/localization",
+    "name": "localization",
+    "icon": "bx bx-world"
+  },
+  {
+    "title": "Settings",
+    "link": "/settings",
+    "name": "settings",
+    "icon": "bx bx-cog"
+  },
+  {
+    "title": "Administration",
+    "link": "/administration",
+    "name": "administration",
+    "icon": "bx bx-slider"
+  },
+  {
+    "title": "Statistics",
+    "link": "/statistics",
+    "name": "statistics",
+    "icon": "bx bx-line-chart"
+  },
+  {
+    "title": "Blacklist",
+    "link": "/blacklist",
+    "name": "blacklist",
+    "icon": "bx bx-user"
+  }
+]

@@ -1,0 +1,31 @@
+.main {
+  padding-left: var(--sideBarWidth);
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 1366px) {
+    padding-left: 0;
+    width: 100vw;
+  }
+
+  &__content {
+    min-height: 100vh;
+    padding: var(--spacing);
+    transition: all .3s ease-in-out;
+
+    @media only screen and (max-width: 1366px) {
+      padding-left: var(--mobileSpacing);
+      position: relative;
+      background: var(--bodyBg);
+      z-index: 100;
+    }
+  }
+}
+
+.sidebar-open .main__content {
+  height: 100vh;
+  overflow: hidden;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  transform: scale(0.8) translateX(50%);
+  transition: all 0.3s ease-in-out;
+}

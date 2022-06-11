@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+
+:root {
+  --bodyBg: #e8e9ef;
+  --mainBg: #fff;
+  --mainColor: #8624DB;
+  --txtColor: #4E4D4F;
+  --purple: #8624DB;
+  --orange: #ffa500;
+  --white: #fff;
+  --black: #000;
+  --green: #4CAF50;
+  --red: #DB190C;
+
+  --fontFamily: 'Roboto', sans-serif;
+
+  --fontSizeNormal: 1.125rem;
+  --fontSizeMedium: 1.25rem;
+  --fontSizeLarge: 1.5625rem;
+
+  --sideBarWidth: 350px;
+  --sideBarLogoHeight: 130px;
+  --spacing: 28px;
+
+  --mobileSpacing: 14px;
+  --borderRadius: 30px;
+
+  --transitionCubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadowLight: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadowDark: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+}

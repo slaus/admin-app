@@ -1,0 +1,19 @@
+.box {
+  padding: 20px 30px;
+  border-radius: var(--borderRadius);
+  background-color: var(--mainBg);
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
+  &-purple {
+    background-color: var(--purple);
+    color: var(--white);
+  }
+
+  &-fullheight {
+    height: calc(100% - var(--spacing));
+
+    @media only screen and (max-width: 1366px) {
+      height: calc(100% - var(--mobileSpacing));
+    }
+  }
+}
