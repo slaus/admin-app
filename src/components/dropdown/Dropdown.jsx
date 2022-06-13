@@ -4,10 +4,10 @@ import {Link} from "react-router-dom";
 import './dropdown.scss';
 
 
-const Dropdown = (props) => {
+const Dropdown = ({name, icon, messagesList}) => {
 
-    const dropdownButtonElement = useRef(null);
-    const dropdownContentElement = useRef(null);
+    const dropdownButtonRef = useRef(null);
+    const dropdownContentRef = useRef(null);
 
     const clickOutsideRef = (contentRef, buttonRef) => {
         document.addEventListener('mousedown', (e) => {
@@ -23,33 +23,42 @@ const Dropdown = (props) => {
         })
     };
 
-    clickOutsideRef(dropdownContentElement, dropdownButtonElement);
+    clickOutsideRef(dropdownContentRef, dropdownButtonRef);
 
-    const onClick = () => dropdownContentElement.current.classList.remove('active');
+    const onClick = () => dropdownContentRef.current.classList.remove('active');
 
     return (
         <div className='dropdown'>
             <button
                 className="dropdown__toggle"
-                ref={dropdownButtonElement}
+                ref={dropdownButtonRef}
             >
-                {props.name &&
-                    <span>{props.name}</span>
+                {name &&
+                <span>{name}</span>
                 }
-                {props.icon &&
-                    <i className={`bx bx-${props.icon}`}></i>
+                {icon &&
+                <i className={`bx bx-${icon}`}></i>
                 }
             </button>
             <div
                 className="dropdown__content"
-                ref={dropdownContentElement}
+                ref={dropdownContentRef}
             >
                 <div className="dropdown__content__item">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
+                        {
+                            messagesList.map((item, index) => {
+                                return item.new ?
+                                    <li
+                                        key={`message-${index}`}
+                                        className={`${item.type === "mail" ? "mail" : item.type === "message" ? "message" : item.type === "error" ? "error" : "reminder"}`}
+                                    >
+                                        <i className={`bx bx-${item.type === "mail" ? "envelope" : item.type === "message" ? "comment-dots" : item.type === "error" ? "error" : "bell"}`}></i>
+                                        {item.message}
+                                    </li>
+                                    : null
+                            })
+                        }
                     </ul>
                 </div>
                 <div className="dropdown__content__footer">

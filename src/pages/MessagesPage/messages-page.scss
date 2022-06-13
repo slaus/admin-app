@@ -1,0 +1,38 @@
+.messages {
+
+  &__block {
+
+    li {
+      position: relative;
+      padding: 10px 10px 10px 35px;
+
+      &.mail {
+        color: var(--green);
+      }
+
+      &.message {
+        color: var(--txtColor);
+      }
+
+      &.error {
+        color: var(--red);
+      }
+
+      &.reminder {
+        color: var(--mainColor);
+      }
+
+      &.unreaded {
+        background: var(--mainBg);
+        font-weight: 400;
+      }
+
+      i {
+        position: absolute;
+        left: 5px;
+        top: 15px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

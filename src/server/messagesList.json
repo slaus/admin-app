@@ -1,0 +1,64 @@
+[
+  {
+    "message": "Hello Mr. Smith. You have admin access to our site. Now you can administer our application.",
+    "type": "mail",
+    "new": true
+  },
+  {
+    "message": "You definitely need to change your account password.",
+    "type": "message",
+    "new": true
+  },
+  {
+    "message": "An error occurred while opening the page. Perhaps you do not have rights to enter this resource, or you entered the wrong password. If the error persists, please contact the administrator.",
+    "type": "error",
+    "new": true
+  },
+  {
+    "message": "You are 20 minutes late for work.",
+    "type": "reminder",
+    "new": true
+  },
+  {
+    "message": "You are accepted. Details on the link \"Link to the site\".",
+    "type": "mail",
+    "new": false
+  },
+  {
+    "message": "Welcome to our company. We are glad that you will become part of our team.",
+    "type": "mail",
+    "new": false
+  },
+  {
+    "message": "We inform you that you have an appointment with Mr. Carter. Please let us know the exact time of your visit.",
+    "type": "message",
+    "new": false
+  },
+  {
+    "message": "We invite you to take part in our event, which will be held on June 15 in the banquet hall. Sincerely, Billy Joel.",
+    "type": "message",
+    "new": false
+  }
+,
+  {
+    "message": "You have an appointment with Mrs. Smith at 10.30 am today.",
+    "type": "reminder",
+    "new": false
+  },
+  {
+    "message": "You have an appointment with Mr. Johnson at 3.45 pm today.",
+    "type": "reminder",
+    "new": false
+  }
+,
+  {
+    "message": "A fatal error has occurred. The administration is already dealing with this problem. We offer our sincere apologies.",
+    "type": "error",
+    "new": false
+  },
+  {
+    "message": "A non-fatal error has occurred. The administration is already dealing with this problem.",
+    "type": "error",
+    "new": false
+  }
+]

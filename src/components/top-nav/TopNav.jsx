@@ -5,7 +5,7 @@ import UserInfo from "../user-info";
 import Search from "../search";
 import Dropdown from "../dropdown";
 
-const TopNav = ({data}) => {
+const TopNav = ({data, messagesList}) => {
 
     const openSidebar = () => {
         document.body.classList.add('sidebar-open');
@@ -17,6 +17,7 @@ const TopNav = ({data}) => {
             <UserInfo name={data.user.name} img={data.user.img} />
             <Dropdown
                 icon="bell"
+                messagesList={messagesList}
             />
             <div
                 className="topnav__toggle"

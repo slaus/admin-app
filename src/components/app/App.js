@@ -15,11 +15,11 @@ import BlacklistPage from "../../pages/BlacklistPage";
 import LogoutPage from "../../pages/LogoutPage";
 import MessagesPage from "../../pages/MessagesPage";
 
-function App({sidebarMenu, data, colors, membersList}) {
+function App({sidebarMenu, data, colors, membersList, messagesList}) {
 
     return (
         <Routes>
-            <Route path="/" element={<Layout sidebarMenu={sidebarMenu} data={data} />}>
+            <Route path="/" element={<Layout sidebarMenu={sidebarMenu} data={data} messagesList={messagesList} />}>
                 <Route index element={<DashboardPage data={data} colors={colors} />}/>
                 <Route path="/help" element={<HelpPage />}/>
                 <Route path="/members" element={<MembersPage membersList={membersList} />}/>
@@ -29,7 +29,7 @@ function App({sidebarMenu, data, colors, membersList}) {
                 <Route path="/administration" element={<AdminPage />}/>
                 <Route path="/statistics" element={<StatisticsPage />}/>
                 <Route path="/blacklist" element={<BlacklistPage />}/>
-                <Route path="/messages" element={<MessagesPage />}/>
+                <Route path="/messages" element={<MessagesPage messagesList={messagesList} />}/>
                 <Route path="/logout" element={<LogoutPage />}/>
             </Route>
         </Routes>
