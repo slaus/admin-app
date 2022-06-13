@@ -13,6 +13,7 @@ import AdminPage from "../../pages/AdminPage";
 import StatisticsPage from "../../pages/StatisticsPage";
 import BlacklistPage from "../../pages/BlacklistPage";
 import LogoutPage from "../../pages/LogoutPage";
+import MessagesPage from "../../pages/MessagesPage";
 
 function App({sidebarMenu, data, colors, membersList}) {
 
@@ -28,6 +29,7 @@ function App({sidebarMenu, data, colors, membersList}) {
                 <Route path="/administration" element={<AdminPage />}/>
                 <Route path="/statistics" element={<StatisticsPage />}/>
                 <Route path="/blacklist" element={<BlacklistPage />}/>
+                <Route path="/messages" element={<MessagesPage />}/>
                 <Route path="/logout" element={<LogoutPage />}/>
             </Route>
         </Routes>

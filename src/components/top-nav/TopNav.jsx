@@ -16,7 +16,7 @@ const TopNav = ({data}) => {
             <Search />
             <UserInfo name={data.user.name} img={data.user.img} />
             <Dropdown
-                name="Icon"
+                icon="bell"
             />
             <div
                 className="topnav__toggle"

@@ -1,40 +1,48 @@
 import React, {useRef} from 'react';
+import {Link} from "react-router-dom";
 
 import './dropdown.scss';
 
 
 const Dropdown = (props) => {
 
-    const clickOutsideRef = (content_ref, toggle_ref) => {
+    const dropdownButtonElement = useRef(null);
+    const dropdownContentElement = useRef(null);
+
+    const clickOutsideRef = (contentRef, buttonRef) => {
         document.addEventListener('mousedown', (e) => {
-            // user click toggle
-            if (toggle_ref.current && toggle_ref.current.contains(e.target)) {
-                content_ref.current.classList.toggle('active')
+            // user click dropdown button
+            if (buttonRef.current && buttonRef.current.contains(e.target)) {
+                contentRef.current.classList.toggle('active');
             } else {
-                // user click outside toggle and content
-                if (content_ref.current && !content_ref.current.contains(e.target)) {
-                    content_ref.current.classList.remove('active')
+                // user click outside dropdown button and dropdown content
+                if (contentRef.current && !contentRef.current.contains(e.target)) {
+                    contentRef.current.classList.remove('active')
                 }
             }
         })
     };
 
-    const dropdown_toggle_el = useRef(null);
-    const dropdown_content_el = useRef(null);
+    clickOutsideRef(dropdownContentElement, dropdownButtonElement);
 
-    clickOutsideRef(dropdown_content_el, dropdown_toggle_el);
+    const onClick = () => dropdownContentElement.current.classList.remove('active');
 
     return (
         <div className='dropdown'>
             <button
                 className="dropdown__toggle"
-                ref={dropdown_toggle_el}
+                ref={dropdownButtonElement}
             >
-                {props.name}
+                {props.name &&
+                    <span>{props.name}</span>
+                }
+                {props.icon &&
+                    <i className={`bx bx-${props.icon}`}></i>
+                }
             </button>
             <div
                 className="dropdown__content"
-                ref={dropdown_content_el}
+                ref={dropdownContentElement}
             >
                 <div className="dropdown__content__item">
                     <ul>
@@ -45,7 +53,10 @@ const Dropdown = (props) => {
                     </ul>
                 </div>
                 <div className="dropdown__content__footer">
-                    <a href="">Show all</a>
+                    <Link
+                        to="/messages"
+                        onClick={onClick}
+                    >Show all</Link>
                 </div>
             </div>
         </div>
