@@ -1,0 +1,53 @@
+.badge {
+  --size: 20px;
+  position: absolute;
+  top: 2px;
+  left: calc(100% - var(--size) - 2px);
+  display: flex;
+  width: auto;
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  padding-top: 2px;
+  font-weight: 300;
+  color: var(--black);
+  background: var(--bodyBg);
+
+  &__primary {
+    color: var(--white);
+    background: var(--primary);
+  }
+
+  &__secondary {
+    color: var(--white);
+    background: var(--secondary);
+  }
+
+  &__success {
+    color: var(--white);
+    background: var(--success);
+  }
+
+  &__danger {
+    color: var(--white);
+    background: var(--danger);
+  }
+
+  &__warning {
+    color: var(--black);
+    background: var(--warning);
+  }
+
+  &__info {
+    color: var(--white);
+    background: var(--info);
+  }
+
+  &__light {
+    color: var(--black);
+    background: var(--white);
+  }
+}

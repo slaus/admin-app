@@ -16,7 +16,7 @@
       width: var(--size);
       height: var(--size);
       border-radius: 50%;
-      background-color: var(--bodyBg);
+      background-color: var(--light);
       margin-right: var(--spacing);
 
       i {
@@ -32,7 +32,7 @@
       flex-direction: column;
 
       .title {
-        color: var(--mainColor);
+        color: var(--primary);
       }
     }
   }

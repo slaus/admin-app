@@ -1,15 +1,45 @@
 .box {
   padding: 20px 30px;
   border-radius: var(--borderRadius);
-  background-color: var(--mainBg);
+  background-color: var(--white);
   box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 
-  &-purple {
-    background-color: var(--purple);
+  &__primary {
+    background-color: var(--primary);
     color: var(--white);
   }
 
-  &-fullheight {
+  &__secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+
+  &__success {
+    background-color: var(--success);
+    color: var(--white);
+  }
+
+  &__danger {
+    background-color: var(--danger);
+    color: var(--white);
+  }
+
+  &__warning {
+    background-color: var(--warning);
+    color: var(--white);
+  }
+
+  &__info {
+    background-color: var(--info);
+    color: var(--black);
+  }
+
+  &__light {
+    background-color: var(--light);
+    color: var(--black);
+  }
+
+  &__fullheight {
     height: calc(100% - var(--spacing));
 
     @media only screen and (max-width: 1366px) {

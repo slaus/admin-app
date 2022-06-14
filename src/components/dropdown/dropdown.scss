@@ -3,12 +3,18 @@
   z-index: 99;
 
   &__toggle {
+    --size: 50px;
+    min-width: var(--size);
+    height: var(--size);
     border: 0;
     outline: 0;
-    background-color: transparent;
+    background-color: var(--white);
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    border-radius: var(--size);
 
     & i {
       font-size: 2.25rem;
@@ -21,7 +27,7 @@
     right: 0;
     width: max-content;
     max-width: 400px;
-    background-color: var(--mainBg);
+    background-color: var(--white);
     box-shadow: var(--shadowDark);
     border-radius: 18px;
     //overflow: hidden;
@@ -40,11 +46,11 @@
         --size: 16px;
         width: var(--size);
         height: var(--size);
-        background-color: var(--mainBg);
+        background-color: var(--white);
         position: absolute;
-        right: 12px;
-        top: -5px;
-        transform: rotate(65deg);
+        right: 18px;
+        top: -2px;
+        transform: rotate(45deg);
       }
     }
 
@@ -58,19 +64,19 @@
         margin-bottom: 10px;
 
         &.mail {
-          color: var(--green);
+          color: var(--success);
         }
 
         &.message {
-          color: var(--txtColor);
+          color: var(--secondary);
         }
 
         &.error {
-          color: var(--red);
+          color: var(--warning);
         }
 
         &.reminder {
-          color: var(--mainColor);
+          color: var(--primary);
         }
 
         i {
@@ -92,7 +98,7 @@
         transition: color .3s ease-in-out;
 
         &:hover {
-          color: var(--mainColor);
+          color: var(--primary);
           transition: color .3s ease-in-out;
         }
       }

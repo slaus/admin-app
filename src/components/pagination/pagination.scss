@@ -22,13 +22,13 @@
 
     &.active,
     &.active:hover {
-      background-color: var(--mainColor);
+      background-color: var(--primary);
       color: var(--white);
       transition: all .3s ease-in-out;
     }
 
     &:hover {
-      color: var(--mainColor);
+      color: var(--primary);
       background-color: var(--white);
       transition: all .3s ease-in-out;
     }

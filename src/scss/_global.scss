@@ -11,10 +11,10 @@ html {
 body {
   font-family: var(--fontFamily);
   font-weight: 300;
-  color: var(--txtColor);
+  color: var(--secondary);
   font-size: var(--fontSizeNormal);
   line-height: 1.4;
-  background-color: var(--bodyBg);
+  background-color: var(--light);
   overflow-x: hidden;
 }
 
@@ -46,11 +46,11 @@ li {
 }
 
 .txt-success {
-  color: var(--green);
+  color: var(--success);
 }
 
 .txt-danger {
-  color: var(--red);
+  color: var(--danger);
 }
 
 @media only screen and (max-width: 1366px) {

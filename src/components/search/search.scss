@@ -2,7 +2,7 @@
   --size: 50px;
   position: relative;
   height: var(--size);
-  background-color: var(--mainBg);
+  background-color: var(--white);
   display: flex;
   align-items: center;
   box-shadow: var(--shadow);
@@ -16,13 +16,13 @@
     font-size: 1rem;
     font-weight: 300;
     border-radius: var(--borderRadius);
-    color: var(--txtColor);
-    background-color: var(--mainBg);
-    border: 1px solid var(--bodyBg);
+    color: var(--secondary);
+    background-color: var(--white);
+    border: 1px solid var(--light);
     transition: all .3s ease-in-out;
 
     &:focus {
-      border: 1px solid var(--mainColor);
+      border: 1px solid var(--primary);
       transition: all .3s ease-in-out;
     }
   }
@@ -32,6 +32,6 @@
     position: absolute;
     right: 15px;
     top: 15px;
-    color: var(--mainColor);
+    color: var(--primary);
   }
 }

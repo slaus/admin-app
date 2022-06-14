@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {Link} from "react-router-dom";
 
 import './dropdown.scss';
+import Badge from "../badge";
 
 
 const Dropdown = ({name, icon, messagesList}) => {
@@ -27,6 +28,8 @@ const Dropdown = ({name, icon, messagesList}) => {
 
     const onClick = () => dropdownContentRef.current.classList.remove('active');
 
+    const quantityNewMessages = messagesList.filter(item => item.new).length;
+
     return (
         <div className='dropdown'>
             <button
@@ -39,27 +42,31 @@ const Dropdown = ({name, icon, messagesList}) => {
                 {icon &&
                 <i className={`bx bx-${icon}`}></i>
                 }
+                <Badge text={quantityNewMessages} />
             </button>
             <div
                 className="dropdown__content"
                 ref={dropdownContentRef}
             >
                 <div className="dropdown__content__item">
-                    <ul>
-                        {
-                            messagesList.map((item, index) => {
-                                return item.new ?
-                                    <li
-                                        key={`message-${index}`}
-                                        className={`${item.type === "mail" ? "mail" : item.type === "message" ? "message" : item.type === "error" ? "error" : "reminder"}`}
-                                    >
-                                        <i className={`bx bx-${item.type === "mail" ? "envelope" : item.type === "message" ? "comment-dots" : item.type === "error" ? "error" : "bell"}`}></i>
-                                        {item.message}
-                                    </li>
-                                    : null
-                            })
-                        }
-                    </ul>
+                    {
+                        quantityNewMessages !== 0 &&
+                        <ul>
+                            {
+                                messagesList.map((item, index) => {
+                                    return item.new ?
+                                        <li
+                                            key={`message-${index}`}
+                                            className={`${item.type === "mail" ? "mail" : item.type === "message" ? "message" : item.type === "error" ? "error" : "reminder"}`}
+                                        >
+                                            <i className={`bx bx-${item.type === "mail" ? "envelope" : item.type === "message" ? "comment-dots" : item.type === "error" ? "error" : "bell"}`}></i>
+                                            {item.message}
+                                        </li>
+                                        : null
+                                })
+                            }
+                        </ul>
+                    }
                 </div>
                 <div className="dropdown__content__footer">
                     <Link

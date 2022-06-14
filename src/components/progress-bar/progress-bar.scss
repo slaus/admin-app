@@ -1,6 +1,6 @@
 .progress-bar {
   height: 6px;
-  background-color: var(--bodyBg);
+  background-color: var(--light);
   border-radius: 2.5px;
 
   &__inner {
@@ -8,15 +8,15 @@
     height: 100%;
 
     &.begin {
-      background-color: var(--green);
+      background-color: var(--success);
     }
 
     &.normal {
-      background-color: var(--purple);
+      background-color: var(--primary);
     }
 
     &.high {
-      background-color: var(--red);
+      background-color: var(--danger);
     }
   }
 }

@@ -18,15 +18,15 @@
         font-weight: 700;
 
         &.begin {
-          color: var(--green);
+          color: var(--success);
         }
 
         &.normal {
-          color: var(--purple);
+          color: var(--primary);
         }
 
         &.high {
-          color: var(--red);
+          color: var(--danger);
         }
       }
     }

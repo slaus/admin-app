@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
 
 :root {
-  --bodyBg: #e8e9ef;
-  --mainBg: #fff;
-  --mainColor: #8624DB;
-  --txtColor: #4E4D4F;
-  --purple: #8624DB;
-  --orange: #ffa500;
+  --primary: #8624db;
+  --secondary: #4e4d4f;
+  --success: #4caf50;
+  --danger: #db190c;
+  --warning: #ffa500;
+  --info: #0dcaf0;
+  --light: #e3e4ea;
   --white: #fff;
   --black: #000;
-  --green: #4CAF50;
-  --red: #DB190C;
 
   --fontFamily: 'Roboto', sans-serif;
 

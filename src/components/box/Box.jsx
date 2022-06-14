@@ -6,8 +6,8 @@ const Box = (props) => {
 
     const className = {
         box: 'box',
-        purple: props.purple && 'box-purple',
-        fullheight: props.fullheight && 'box-fullheight'
+        purple: props.purple && 'box__primary',
+        fullheight: props.fullheight && 'box__fullheight'
     };
 
     return (
