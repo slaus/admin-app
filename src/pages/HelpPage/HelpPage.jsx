@@ -2,6 +2,7 @@ import React from 'react';
 
 import './help-page.scss';
 import PageHeader from "../../components/page-header";
+import Icon from "../../components/icon";
 
 const HelpPage = () => {
 
@@ -12,6 +13,7 @@ const HelpPage = () => {
                 className="page-header"
                 Tag="h2"
             />
+            <Icon />
         </div>
     );
 };

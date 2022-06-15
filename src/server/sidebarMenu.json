@@ -3,54 +3,54 @@
     "title": "Dashboard",
     "link": "/",
     "name": "dashboard",
-    "icon": "bx bxs-dashboard"
+    "icon": "book-alt"
   },
   {
     "title": "Help",
     "link": "/help",
     "name": "help",
-    "icon": "bx bx-help-circle"
+    "icon": "help-circle"
   },
   {
     "title": "Members",
     "link": "/members",
     "name": "members",
-    "icon": "bx bx-group"
+    "icon": "group"
   },
   {
     "title": "Payments",
     "link": "/payments",
     "name": "payments",
-    "icon": "bx bx-wallet"
+    "icon": "wallet"
   },
   {
     "title": "Localization",
     "link": "/localization",
     "name": "localization",
-    "icon": "bx bx-world"
+    "icon": "world"
   },
   {
     "title": "Settings",
     "link": "/settings",
     "name": "settings",
-    "icon": "bx bx-cog"
+    "icon": "cog"
   },
   {
     "title": "Administration",
     "link": "/administration",
     "name": "administration",
-    "icon": "bx bx-slider"
+    "icon": "slider"
   },
   {
     "title": "Statistics",
     "link": "/statistics",
     "name": "statistics",
-    "icon": "bx bx-line-chart"
+    "icon": "line-chart"
   },
   {
     "title": "Blacklist",
     "link": "/blacklist",
     "name": "blacklist",
-    "icon": "bx bx-user"
+    "icon": "user"
   }
 ]

@@ -4,11 +4,30 @@ import classNames from 'classnames';
 
 import './badge.scss';
 
-const Badge = ({color, text}) => {
+const Badge = ({
+                   text,
+                   primary,
+                   secondary,
+                   success,
+                   danger,
+                   warning,
+                   info,
+                   light,
+                   square,
+                   className
+               }) => {
 
     const badgeClasses = classNames(
         'badge',
-        `badge__${color}`
+        primary ? 'badge-primary' : null,
+        secondary ? 'badge-secondary' : null,
+        success ? 'badge-success' : null,
+        danger ? 'badge-danger' : null,
+        warning ? 'badge-warning' : null,
+        info ? 'badge-info' : null,
+        light ? 'badge-light' : null,
+        square ? 'badge-square' : null,
+        className
     );
 
     return (
@@ -24,16 +43,32 @@ const Badge = ({color, text}) => {
 };
 
 Badge.propTypes = {
-    color: PropTypes.string,
     text: PropTypes.oneOfType([
         PropTypes.number,
         PropTypes.string
     ]),
+    className: PropTypes.string,
+    primary: PropTypes.bool,
+    secondary: PropTypes.bool,
+    success: PropTypes.bool,
+    danger: PropTypes.bool,
+    warning: PropTypes.bool,
+    info: PropTypes.bool,
+    light: PropTypes.bool,
+    square: PropTypes.bool,
 };
 
 Badge.defaultProps = {
-    color: 'danger',
-    text: ''
+    text: null,
+    classNames: '',
+    primary: false,
+    secondary: false,
+    success: false,
+    danger: true,
+    warning: false,
+    info: false,
+    light: false,
+    square: false,
 };
 
 export default Badge;

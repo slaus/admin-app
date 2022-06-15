@@ -62,7 +62,7 @@ const LineChart = ({item}) => {
     };
 
     return (
-        <Box purple fullheight>
+        <Box height="full" color="primary">
             <div className="line-chart">
                 <div className="line-chart__title">
                     {item.title}

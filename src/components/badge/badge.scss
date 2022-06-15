@@ -4,49 +4,52 @@
   top: 2px;
   left: calc(100% - var(--size) - 2px);
   display: flex;
-  width: auto;
   min-width: var(--size);
   height: var(--size);
-  border-radius: var(--size);
   align-items: center;
   justify-content: center;
   font-size: .75rem;
-  padding-top: 2px;
   font-weight: 300;
   color: var(--black);
   background: var(--bodyBg);
+  border-radius: var(--size);
 
-  &__primary {
+  &-square {
+    width: auto;
+    border-radius: 3px;
+  }
+
+  &-primary {
     color: var(--white);
     background: var(--primary);
   }
 
-  &__secondary {
+  &-secondary {
     color: var(--white);
     background: var(--secondary);
   }
 
-  &__success {
+  &-success {
     color: var(--white);
     background: var(--success);
   }
 
-  &__danger {
+  &-danger {
     color: var(--white);
     background: var(--danger);
   }
 
-  &__warning {
+  &-warning {
     color: var(--black);
     background: var(--warning);
   }
 
-  &__info {
+  &-info {
     color: var(--white);
     background: var(--info);
   }
 
-  &__light {
+  &-light {
     color: var(--black);
     background: var(--white);
   }

@@ -4,6 +4,7 @@ import {Link, useLocation} from 'react-router-dom';
 import {images} from '../../constants';
 
 import './sidebar.scss';
+import Icon from "../icon";
 
 const Sidebar = ({sidebarMenu}) => {
 
@@ -38,11 +39,11 @@ const Sidebar = ({sidebarMenu}) => {
                         <Link
                             key={`nav-${index}`}
                             to={nav.link}
-                            className={`sidebar__menu__item ${activeIndex === index && 'active'}`}
+                            className={`sidebar__menu__item ${activeIndex === index ? 'active' : ''}`}
                             onClick={closeSidebar}
                         >
                             <div className="sidebar__menu__item__icon">
-                                <i className={nav.icon}></i>
+                                <Icon name={nav.icon} medium />
                             </div>
                             <div className="sidebar__menu__item__txt">
                                 {nav.title}
@@ -55,7 +56,7 @@ const Sidebar = ({sidebarMenu}) => {
                     className="sidebar__menu__item"
                 >
                     <div className="sidebar__menu__item__icon">
-                        <i className="bx bx-log-out"></i>
+                        <Icon name="log-out" medium />
                     </div>
                     <div className="sidebar__menu__item__txt">
                         Logout

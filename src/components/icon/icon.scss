@@ -1,0 +1,43 @@
+.icon {
+  font-size: 1.25rem;
+
+  &.bx-primary {
+    color: var(--primary);
+  }
+
+  &.bx-secondary {
+    color: var(--secondary);
+  }
+
+  &.bx-success {
+    color: var(--success);
+  }
+
+  &.bx-danger {
+    color: var(--danger);
+  }
+
+  &.bx-warning {
+    color: var(--warning);
+  }
+
+  &.bx-info {
+    color: var(--info);
+  }
+
+  &.bx-light {
+    color: var(--white);
+  }
+
+  &.bx-small {
+    font-size: 1rem;
+  }
+
+  &.bx-medium {
+    font-size: 1.75rem;
+  }
+
+  &.bx-large {
+    font-size: 2.25rem;
+  }
+}

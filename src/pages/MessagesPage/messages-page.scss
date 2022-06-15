@@ -4,32 +4,32 @@
 
     li {
       position: relative;
-      padding: 10px 10px 10px 35px;
+      padding: 10px 10px 10px 40px;
 
       &.mail {
-        color: var(--green);
+        color: var(--success);
       }
 
       &.message {
-        color: var(--txtColor);
+        color: var(--secondary);
       }
 
       &.error {
-        color: var(--red);
+        color: var(--danger);
       }
 
       &.reminder {
-        color: var(--mainColor);
+        color: var(--primary);
       }
 
       &.unreaded {
-        background: var(--mainBg);
+        background: var(--white);
         font-weight: 400;
       }
 
       i {
         position: absolute;
-        left: 5px;
+        left: 10px;
         top: 15px;
         font-size: 1rem;
       }

@@ -1,28 +1,36 @@
 import React from 'react';
 
 import './search.scss';
+import Input from "../input";
 
 const Search = () => {
 
     const search = 'Search here...';
 
-    const onFocus = e => e.target.placeholder = '';
+    const onFocus = (e) => {
+        setTimeout(() => {
+            e.target.placeholder = '';
+        }, 200);
+    };
 
     const onBlur = (e) => {
-        e.target.value = '';
-        e.target.placeholder = 'Search here...';
+        setTimeout(() => {
+            e.target.value = '';
+            e.target.placeholder = 'Search here...';
+        }, 200);
     };
+
+    const onClick = () => console.log("!!!!!");
 
     return (
         <div className="search">
-            <input
-                type="text"
+            <Input onClick={onClick}
                 placeholder={search}
                 onChange={(e) => e.target.value}
                 onFocus={onFocus}
                 onBlur={onBlur}
+                icon="search"
             />
-            <i className='bx bx-search'></i>
         </div>
     );
 };

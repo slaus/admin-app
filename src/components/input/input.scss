@@ -1,0 +1,43 @@
+.input {
+  --size: 50px;
+  position: relative;
+  height: var(--size);
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+
+  & > i {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: var(--primary);
+  }
+
+  & label {
+    position: absolute;
+    font-size: .85rem;
+    top: 0;
+    left: 20px;
+  }
+
+  &__value {
+    height: 100%;
+    width: 100%;
+    padding: 10px 60px 10px 20px;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: var(--borderRadius);
+    color: var(--secondary);
+    background-color: var(--white);
+    border: 1px solid var(--light);
+    transition: all .5s ease-in-out;
+
+    &:focus {
+      border: 1px solid var(--primary);
+      transition: all .5s ease-in-out;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 import './dropdown.scss';
 import Badge from "../badge";
+import Icon from "../icon";
 
 
 const Dropdown = ({name, icon, messagesList}) => {
@@ -40,7 +41,7 @@ const Dropdown = ({name, icon, messagesList}) => {
                 <span>{name}</span>
                 }
                 {icon &&
-                <i className={`bx bx-${icon}`}></i>
+                <Icon name={icon} large />
                 }
                 <Badge text={quantityNewMessages} />
             </button>

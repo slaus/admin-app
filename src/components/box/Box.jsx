@@ -1,20 +1,32 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import './box.scss';
 
-const Box = (props) => {
+const Box = ({color, children, height}) => {
 
-    const className = {
-        box: 'box',
-        purple: props.purple && 'box__primary',
-        fullheight: props.fullheight && 'box__fullheight'
-    };
+    const boxClasses = classNames(
+        'box',
+        `box__${color}`,
+        height && `box__${height}-height`
+    );
 
     return (
-        <div className={Object.values(className).join(' ')}>
-            {props.children}
+        <div className={boxClasses}>
+            {children}
         </div>
     );
+};
+
+Box.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string
+};
+
+Box.defaultProps = {
+    color: 'white',
+    height: null
 };
 
 export default Box;
