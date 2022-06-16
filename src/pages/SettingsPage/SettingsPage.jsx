@@ -9,8 +9,6 @@ const SettingsPage = () => {
         <div>
             <PageHeader
                 text="Settings Page"
-                className="page-header"
-                Tag="h2"
             />
         </div>
     );

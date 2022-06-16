@@ -9,8 +9,6 @@ const AdminPage = () => {
         <div>
             <PageHeader
                 text="Administration Page"
-                className="page-header"
-                Tag="h2"
             />
         </div>
     );

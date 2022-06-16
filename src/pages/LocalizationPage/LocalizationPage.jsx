@@ -9,8 +9,6 @@ const LocalizationPage = () => {
         <div>
             <PageHeader
                 text="Localization Page"
-                className="page-header"
-                Tag="h2"
             />
         </div>
     );

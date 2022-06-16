@@ -9,8 +9,6 @@ const LogoutPage = () => {
         <div>
             <PageHeader
                 text="Logout Page"
-                className="page-header"
-                Tag="h2"
             />
         </div>
     );

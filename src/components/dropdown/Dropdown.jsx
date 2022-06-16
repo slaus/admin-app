@@ -60,7 +60,10 @@ const Dropdown = ({name, icon, messagesList}) => {
                                             key={`message-${index}`}
                                             className={`${item.type === "mail" ? "mail" : item.type === "message" ? "message" : item.type === "error" ? "error" : "reminder"}`}
                                         >
-                                            <i className={`bx bx-${item.type === "mail" ? "envelope" : item.type === "message" ? "comment-dots" : item.type === "error" ? "error" : "bell"}`}></i>
+                                            <Icon
+                                                small
+                                                name={item.type === "mail" ? "envelope" : item.type === "message" ? "comment-dots" : item.type === "error" ? "error" : "bell"}
+                                            />
                                             {item.message}
                                         </li>
                                         : null

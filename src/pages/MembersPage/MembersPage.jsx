@@ -34,8 +34,6 @@ const MembersPage = ({membersList}) => {
         <div className="member-page">
             <PageHeader
                 text="Members Page"
-                className="page-header"
-                Tag="h2"
             />
             <div className="row">
                 <div className="col-12">

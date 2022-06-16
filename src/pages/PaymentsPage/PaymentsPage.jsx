@@ -9,8 +9,6 @@ const PaymentsPage = () => {
         <div>
             <PageHeader
                 text="Payments Page"
-                className="page-header"
-                Tag="h2"
             />
         </div>
     );

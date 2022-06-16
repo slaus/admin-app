@@ -9,8 +9,6 @@ const BlacklistPage = () => {
         <div>
             <PageHeader
                 text="Blacklist Page"
-                className="page-header"
-                Tag="h2"
             />
         </div>
     );

@@ -24,7 +24,7 @@ const Search = () => {
 
     return (
         <div className="search">
-            <Input onClick={onClick}
+            <Input
                 placeholder={search}
                 onChange={(e) => e.target.value}
                 onFocus={onFocus}
