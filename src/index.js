@@ -8,6 +8,7 @@ import './scss/index.scss';
 import sidebarMenu from './server/sidebarMenu.json';
 import membersList from './server/membersList.json';
 import messagesList from './server/messagesList.json';
+import guideList from './server/guideList.json';
 import {data, colors} from'./constants';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +20,7 @@ root.render(
             data={data}
             colors={colors}
             messagesList={messagesList}
+            guideList={guideList}
         />
     </BrowserRouter>
 );

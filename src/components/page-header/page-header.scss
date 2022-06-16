@@ -6,6 +6,34 @@
 .h6 {
   margin-bottom: var(--spacing);
 
+  &[class*="-primary"] {
+    color: var(--primary);
+  }
+
+  &[class*="-secondary"] {
+    color: var(--secondary);
+  }
+
+  &[class*="-success"] {
+    color: var(--success);
+  }
+
+  &[class*="-danger"] {
+    color: var(--danger);
+  }
+
+  &[class*="-warning"] {
+    color: var(--warning);
+  }
+
+  &[class*="-info"] {
+    color: var(--info);
+  }
+
+  &[class*="-light"] {
+    color: var(--white);
+  }
+
   i {
     margin-right: 10px;
   }
@@ -33,32 +61,4 @@
 
 .h6 {
   font-size: 1.1rem;
-}
-
-[class*="primary"] {
-  color: var(--primary);
-}
-
-[class*="secondary"] {
-  color: var(--secondary);
-}
-
-[class*="success"] {
-  color: var(--success);
-}
-
-[class*="danger"] {
-  color: var(--danger);
-}
-
-[class*="warning"] {
-  color: var(--warning);
-}
-
-[class*="info"] {
-  color: var(--info);
-}
-
-[class*="light"] {
-  color: var(--white);
 }

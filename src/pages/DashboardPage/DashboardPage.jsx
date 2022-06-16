@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './dashboard-page.scss';
-import DashboardWrapper from "../../components/dashboard-wrapper";
+import Wrapper from "../../components/wrapper";
 import SummaryBox from "../../components/summary-box";
 import LineChart from "../../components/line-chart";
 import VerticalBarChart from "../../components/vertical-bar-chart";
@@ -11,7 +11,7 @@ import RevenueList from "../../components/revenue-list";
 const DashboardPage = ({data, colors}) => {
 
     return (
-        <DashboardWrapper>
+        <Wrapper>
             <div className="row">
                 <div className="col-md-8 col-12">
                     <div className="row">
@@ -62,7 +62,7 @@ const DashboardPage = ({data, colors}) => {
                     </div>
                 </div>
             </div>
-        </DashboardWrapper>
+        </Wrapper>
     );
 };
 

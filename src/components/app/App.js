@@ -15,22 +15,29 @@ import BlacklistPage from "../../pages/BlacklistPage";
 import LogoutPage from "../../pages/LogoutPage";
 import MessagesPage from "../../pages/MessagesPage";
 
-function App({sidebarMenu, data, colors, membersList, messagesList}) {
+function App({
+                 sidebarMenu,
+                 data,
+                 colors,
+                 membersList,
+                 messagesList,
+                 guideList
+             }) {
 
     return (
         <Routes>
-            <Route path="/" element={<Layout sidebarMenu={sidebarMenu} data={data} messagesList={messagesList} />}>
-                <Route index element={<DashboardPage data={data} colors={colors} />}/>
-                <Route path="/help" element={<HelpPage />}/>
-                <Route path="/members" element={<MembersPage membersList={membersList} />}/>
-                <Route path="/payments" element={<PaymentsPage />}/>
-                <Route path="/localization" element={<LocalizationPage />}/>
-                <Route path="/settings" element={<SettingsPage />}/>
-                <Route path="/administration" element={<AdminPage />}/>
-                <Route path="/statistics" element={<StatisticsPage />}/>
-                <Route path="/blacklist" element={<BlacklistPage />}/>
-                <Route path="/messages" element={<MessagesPage messagesList={messagesList} />}/>
-                <Route path="/logout" element={<LogoutPage />}/>
+            <Route path="/" element={<Layout sidebarMenu={sidebarMenu} data={data} messagesList={messagesList}/>}>
+                <Route index element={<DashboardPage data={data} colors={colors}/>}/>
+                <Route path="/help" element={<HelpPage guideList={guideList}/>}/>
+                <Route path="/members" element={<MembersPage membersList={membersList}/>}/>
+                <Route path="/payments" element={<PaymentsPage/>}/>
+                <Route path="/localization" element={<LocalizationPage/>}/>
+                <Route path="/settings" element={<SettingsPage/>}/>
+                <Route path="/administration" element={<AdminPage/>}/>
+                <Route path="/statistics" element={<StatisticsPage/>}/>
+                <Route path="/blacklist" element={<BlacklistPage/>}/>
+                <Route path="/messages" element={<MessagesPage messagesList={messagesList}/>}/>
+                <Route path="/logout" element={<LogoutPage/>}/>
             </Route>
         </Routes>
     );
