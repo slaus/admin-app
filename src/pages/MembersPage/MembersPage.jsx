@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './members-page.scss';
-import Table from "../../components/table";
+import Table from "../../components/ui/table";
 import PageHeader from "../../components/page-header";
 
 const customerTableHead = [
@@ -29,7 +29,7 @@ const renderBody = (item, index) => (
     </tr>
 );
 
-const MembersPage = ({membersList}) => {
+const MembersPage = ({membersList, limit}) => {
     return (
         <div className="member-page">
             <PageHeader
@@ -38,7 +38,7 @@ const MembersPage = ({membersList}) => {
             <div className="row">
                 <div className="col-12">
                     <Table
-                        limit='10'
+                        limit={limit}
                         headData={customerTableHead}
                         renderHead={(item, index) => renderHead(item, index)}
                         bodyData={membersList}

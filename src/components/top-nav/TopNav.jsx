@@ -3,7 +3,7 @@ import React from 'react';
 import './top-nav.scss';
 import UserInfo from "../user-info";
 import Search from "../search";
-import Dropdown from "../dropdown";
+import Dropdown from "../ui/dropdown";
 
 const TopNav = ({data, messagesList}) => {
 

@@ -4,7 +4,7 @@ import {Link, useLocation} from 'react-router-dom';
 import {images} from '../../constants';
 
 import './sidebar.scss';
-import Icon from "../icon";
+import Icon from "../ui/icon";
 
 const Sidebar = ({sidebarMenu}) => {
 

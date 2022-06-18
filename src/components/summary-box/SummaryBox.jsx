@@ -2,7 +2,7 @@ import React from 'react';
 import {buildStyles, CircularProgressbarWithChildren} from 'react-circular-progressbar';
 
 import './summary-box.scss';
-import Box from "../box";
+import Box from "../ui/box";
 
 const SummaryBox = ({title, subtitle, value, percent, colors}) => {
 

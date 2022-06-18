@@ -21,7 +21,8 @@ function App({
                  colors,
                  membersList,
                  messagesList,
-                 guideList
+                 guideList,
+                 limit
              }) {
 
     return (
@@ -29,7 +30,7 @@ function App({
             <Route path="/" element={<Layout sidebarMenu={sidebarMenu} data={data} messagesList={messagesList}/>}>
                 <Route index element={<DashboardPage data={data} colors={colors}/>}/>
                 <Route path="/help" element={<HelpPage guideList={guideList}/>}/>
-                <Route path="/members" element={<MembersPage membersList={membersList}/>}/>
+                <Route path="/members" element={<MembersPage limit={limit} membersList={membersList}/>}/>
                 <Route path="/payments" element={<PaymentsPage/>}/>
                 <Route path="/localization" element={<LocalizationPage/>}/>
                 <Route path="/settings" element={<SettingsPage/>}/>

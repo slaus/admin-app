@@ -11,7 +11,7 @@ import {
 } from 'chart.js';
 
 import './vertical-bar-chart.scss';
-import Box from "../box";
+import Box from "../ui/box";
 
 
 ChartJS.register(

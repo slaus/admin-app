@@ -2,7 +2,7 @@ import React from 'react';
 
 import './revenue-list.scss';
 import ProgressBar from "../progress-bar";
-import Box from "../box";
+import Box from "../ui/box";
 
 const RevenueList = ({data}) => {
 

@@ -1,0 +1,49 @@
+.help {
+
+  &__item {
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+
+    &__question {
+      display: block;
+    }
+
+    &__answer {
+      display: none;
+    }
+
+    @media only screen and (max-width: 1368px) {
+      &:hover {
+        color: var(--warning);
+        transition: all .3s ease-in-out;
+
+        i {
+          color: var(--warning);
+        }
+      }
+    }
+
+    @media only screen and (min-width: 1367px) {
+      &:hover {
+        color: var(--black);
+        transition: all .3s ease-in-out;
+
+        i {
+          color: var(--black);
+        }
+      }
+    }
+
+    i {
+      margin-right: 10px;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+    text-align: right;
+  }
+}

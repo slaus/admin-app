@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './search.scss';
-import Input from "../input";
+import Input from "../ui/input";
 
 const Search = () => {
 
@@ -26,7 +26,7 @@ const Search = () => {
         <div className="search">
             <Input
                 placeholder={search}
-                onChange={(e) => e.target.value}
+                onChange={(e) => console.log(e.target.value)}
                 onFocus={onFocus}
                 onBlur={onBlur}
                 icon="search"

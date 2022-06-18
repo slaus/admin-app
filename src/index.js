@@ -21,6 +21,7 @@ root.render(
             colors={colors}
             messagesList={messagesList}
             guideList={guideList}
+            limit="10"
         />
     </BrowserRouter>
 );

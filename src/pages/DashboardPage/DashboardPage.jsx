@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './dashboard-page.scss';
-import Wrapper from "../../components/wrapper";
+import Wrapper from "../../components/ui/wrapper";
 import SummaryBox from "../../components/summary-box";
 import LineChart from "../../components/line-chart";
 import VerticalBarChart from "../../components/vertical-bar-chart";

@@ -12,7 +12,7 @@ import {
 } from 'chart.js';
 
 import './line-chart.scss';
-import Box from "../box";
+import Box from "../ui/box";
 
 
 ChartJS.register(

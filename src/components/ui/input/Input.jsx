@@ -35,7 +35,6 @@ const Input = ({
                 onChange={onChange}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                value={value}
             />
             {
                 icon && icon !== '' &&

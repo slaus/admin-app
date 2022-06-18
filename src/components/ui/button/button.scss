@@ -1,0 +1,128 @@
+.button {
+  --small: 25px;
+  --medium: 38px;
+  --large: 45px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  box-shadow: var(--shadow);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 5px;
+  text-decoration: none;
+  transition: all .3s;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: auto;
+  height: var(--medium);
+  overflow: hidden;
+  z-index: 1;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(
+                    to bottom right,
+                    rgba(0, 0, 0, .35),
+                    rgba(0, 0, 0, .15)
+    );
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease 0s;
+    z-index: -1;
+  }
+
+  &:disabled, &:disabled:hover {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+
+  &-primary {
+    color: var(--white);
+    background: var(--primary);
+    border: 1px solid var(--primary);
+  }
+
+  &-secondary {
+    color: var(--white);
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
+  }
+
+  &-success {
+    color: var(--white);
+    background: var(--success);
+    border: 1px solid var(--success);
+  }
+
+  &-danger {
+    color: var(--white);
+    background: var(--danger);
+    border: 1px solid var(--danger);
+  }
+
+  &-warning {
+    color: var(--black);
+    background: var(--warning);
+    border: 1px solid var(--warning);
+  }
+
+  &-info {
+    color: var(--white);
+    background: var(--info);
+    border: 1px solid var(--info);
+  }
+
+  &-light {
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid var(--white);
+  }
+
+  &-large {
+    height: var(--large);
+    font-size: 18px;
+  }
+
+  &-small {
+    height: var(--small);
+    font-size: 14px;
+  }
+
+  &-round {
+    border-radius: var(--medium);
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &[class*="large"] {
+      border-radius: var(--large);
+    }
+
+    &[class*="small"] {
+      border-radius: var(--small);
+    }
+  }
+
+  &:not(&:disabled):hover, &-active {
+    text-decoration: none;
+    color: var(--white);
+    transition: all .3s ease-in-out;
+
+    &[class*="light"] {
+      color: var(--black);
+    }
+
+    &::before {
+      transform: scale(2.75);
+    }
+  }
+}

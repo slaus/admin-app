@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './overall-list.scss';
-import Box from "../box";
+import Box from "../ui/box";
 
 const icons = [
     <i className='bx bx-receipt'></i>,
