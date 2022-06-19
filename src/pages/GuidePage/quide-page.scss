@@ -7,6 +7,15 @@
     align-items: center;
   }
 
+  &__column {
+    flex-direction: column;
+    transition: all .5s ease-in-out;
+  }
+
+  &__block {
+    transition: all .5s ease-in-out;
+  }
+
   &__item {
     margin-bottom: 10px;
     text-decoration: none;

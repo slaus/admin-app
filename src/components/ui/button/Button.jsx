@@ -63,7 +63,7 @@ const Button = ({
                     onClick={onClickAction}
                 >
                     {icon && icon.length && <Icon name={icon} solid={iconSolid} />}
-                    {text}
+                    <span>{text}</span>
                     {number && <span className="button-number">{`(${number})`}</span>}
                 </Link>
                 :
@@ -73,7 +73,7 @@ const Button = ({
                     onClick={onClickAction}
                 >
                     {icon && icon.length && <Icon name={icon} solid={iconSolid} />}
-                    {text}
+                    <span>{text}</span>
                     {number && <span className="button-number">{`(${number})`}</span>}
                 </button>
             }
@@ -102,7 +102,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-    text: 'Button',
+    text: '',
     onClick: () => {
     },
     className: '',

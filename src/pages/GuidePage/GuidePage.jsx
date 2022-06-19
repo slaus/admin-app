@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './quide-page.scss';
 import PageHeader from "../../components/ui/page-header";
@@ -13,20 +13,23 @@ const GuidePage = ({guideList, guideListLimit}) => {
         console.log(e.target)
     };
 
+    const [column, setColumn] = useState(false);
+
     return (
         <div className="guide">
             <div className="guide__title">
                 <PageHeader
                     text="Guide Page"
                 />
-                <Button secondary round icon="grid-alt" text="grid" />
+                <Button success round icon="border-all" onClick={() => setColumn(false)} />
+                <Button success round icon="square" onClick={() => setColumn(true)} />
                 <Button round warning text="add question" />
             </div>
             <Wrapper>
-                <div className="row">
+                <div className={`row ${column ? "guide__column" : ""}`}>
                     {
                         guideList.map((block, index) => (
-                            <div className="col-12 col-md-6 mb" key={`quide-${index}`}>
+                            <div className={`guide__block col-12 col-md-${column ? 12 : 6} mb`} key={`quide-${index}`}>
                                 <Box>
                                     <PageHeader Tag="h3" text={block.title}/>
                                     <ul className="guide__list">
