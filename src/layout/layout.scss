@@ -11,6 +11,20 @@
     min-height: 100vh;
     padding: var(--spacing);
     transition: all .3s ease-in-out;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0);
+      z-index: 9;
+      transition: all 0.3s ease-in-out;
+    }
 
     @media only screen and (max-width: 1366px) {
       padding-left: var(--mobileSpacing);
@@ -28,4 +42,9 @@
   border-bottom-left-radius: 30px;
   transform: scale(0.8) translateX(50%);
   transition: all 0.3s ease-in-out;
+
+  &:after {
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
 }

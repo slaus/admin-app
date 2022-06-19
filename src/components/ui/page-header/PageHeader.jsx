@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import './page-header.scss';
-import Icon from "../ui/icon";
+import Icon from "../icon";
 
 const PageHeader = ({
                         Tag,

@@ -6,7 +6,7 @@ import Layout from "../../layout";
 import DashboardPage from "../../pages/DashboardPage";
 import MembersPage from "../../pages/MembersPage";
 import LocalizationPage from "../../pages/LocalizationPage";
-import HelpPage from "../../pages/HelpPage";
+import GuidePage from "../../pages/GuidePage";
 import PaymentsPage from "../../pages/PaymentsPage";
 import SettingsPage from "../../pages/SettingsPage";
 import AdminPage from "../../pages/AdminPage";
@@ -21,16 +21,17 @@ function App({
                  colors,
                  membersList,
                  messagesList,
+                 membersListLimit,
                  guideList,
-                 limit
+                 guideListLimit
              }) {
 
     return (
         <Routes>
             <Route path="/" element={<Layout sidebarMenu={sidebarMenu} data={data} messagesList={messagesList}/>}>
                 <Route index element={<DashboardPage data={data} colors={colors}/>}/>
-                <Route path="/help" element={<HelpPage guideList={guideList}/>}/>
-                <Route path="/members" element={<MembersPage limit={limit} membersList={membersList}/>}/>
+                <Route path="/guide" element={<GuidePage guideList={guideList} guideListLimit={guideListLimit}/>}/>
+                <Route path="/members" element={<MembersPage membersListLimit={membersListLimit} membersList={membersList}/>}/>
                 <Route path="/payments" element={<PaymentsPage/>}/>
                 <Route path="/localization" element={<LocalizationPage/>}/>
                 <Route path="/settings" element={<SettingsPage/>}/>

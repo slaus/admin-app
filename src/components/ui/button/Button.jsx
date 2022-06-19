@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {Link} from "react-router-dom";
 
 import './button.scss';
+import Icon from "../icon";
 
 const Button = ({
                     text,
@@ -21,6 +22,9 @@ const Button = ({
                     info,
                     light,
                     round,
+                    icon,
+                    iconSolid,
+                    number,
                     onClick,
                     className
                 }) => {
@@ -58,7 +62,9 @@ const Button = ({
                     disabled={disabled}
                     onClick={onClickAction}
                 >
+                    {icon && icon.length && <Icon name={icon} solid={iconSolid} />}
                     {text}
+                    {number && <span className="button-number">{`(${number})`}</span>}
                 </Link>
                 :
                 <button
@@ -66,7 +72,9 @@ const Button = ({
                     disabled={disabled}
                     onClick={onClickAction}
                 >
+                    {icon && icon.length && <Icon name={icon} solid={iconSolid} />}
                     {text}
+                    {number && <span className="button-number">{`(${number})`}</span>}
                 </button>
             }
         </>
@@ -90,6 +98,7 @@ Button.propTypes = {
     warning: PropTypes.bool,
     info: PropTypes.bool,
     light: PropTypes.bool,
+    number: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -110,6 +119,9 @@ Button.defaultProps = {
     warning: false,
     info: false,
     light: false,
+    icon: false,
+    iconSolid: false,
+    number: false,
 };
 
 export default Button;

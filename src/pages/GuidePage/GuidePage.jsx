@@ -1,23 +1,27 @@
 import React from 'react';
 
-import './help-page.scss';
-import PageHeader from "../../components/page-header";
+import './quide-page.scss';
+import PageHeader from "../../components/ui/page-header";
 import Wrapper from "../../components/ui/wrapper";
 import Box from "../../components/ui/box";
 import Icon from "../../components/ui/icon";
 import Button from "../../components/ui/button";
 
-const HelpPage = ({guideList}) => {
+const GuidePage = ({guideList, guideListLimit}) => {
 
     const onClick = (e) => {
         console.log(e.target)
     };
 
     return (
-        <div>
-            <PageHeader
-                text="Help Page"
-            />
+        <div className="guide">
+            <div className="guide__title">
+                <PageHeader
+                    text="Guide Page"
+                />
+                <Button secondary round icon="grid-alt" text="grid" />
+                <Button round warning text="add question" />
+            </div>
             <Wrapper>
                 <div className="row">
                     {
@@ -25,30 +29,31 @@ const HelpPage = ({guideList}) => {
                             <div className="col-12 col-md-6 mb" key={`quide-${index}`}>
                                 <Box>
                                     <PageHeader Tag="h3" text={block.title}/>
-                                    <ul className="help">
+                                    <ul className="guide__list">
                                         {
-                                            block.help.map((item, index) => (
+                                            block.help.slice(0, Number(guideListLimit)).map((item, index) => (
                                                 <li
                                                     key={`item-${index}`}
-                                                    className="help__item"
+                                                    className="guide__item"
                                                     onClick={onClick}
                                                 >
-                                                    <div className="help__item__question">
+                                                    <div className="guide__item__question">
                                                         <Icon name="help-circle" small primary/>
                                                         {item.question}
                                                     </div>
-                                                    <div className="help__item__answer">
+                                                    <div className="guide__item__answer">
                                                         {item.answer}
                                                     </div>
                                                 </li>
                                             ))
                                         }
                                     </ul>
-                                    <div className="help__button">
+                                    <div className="guide__button">
                                         {
-                                            block.help.length > 5 &&
-                                            <Button round text="see all questions"/>
+                                            block.help.length > Number(guideListLimit) &&
+                                            <Button round text="see all questions" number={block.help.length}/>
                                         }
+
                                     </div>
                                 </Box>
                             </div>
@@ -60,4 +65,4 @@ const HelpPage = ({guideList}) => {
     );
 };
 
-export default HelpPage;
+export default GuidePage;

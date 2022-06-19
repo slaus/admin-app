@@ -17,11 +17,12 @@ root.render(
         <App
             sidebarMenu={sidebarMenu}
             membersList={membersList}
+            membersListLimit="10"
             data={data}
             colors={colors}
             messagesList={messagesList}
             guideList={guideList}
-            limit="10"
+            guideListLimit="5"
         />
     </BrowserRouter>
 );

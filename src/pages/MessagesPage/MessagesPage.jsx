@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './messages-page.scss';
-import PageHeader from "../../components/page-header";
+import PageHeader from "../../components/ui/page-header";
 import Icon from "../../components/ui/icon";
 
 const MessagesPage = ({messagesList}) => {

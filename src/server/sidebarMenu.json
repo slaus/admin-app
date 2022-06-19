@@ -6,9 +6,9 @@
     "icon": "book-alt"
   },
   {
-    "title": "Help",
-    "link": "/help",
-    "name": "help",
+    "title": "Guide",
+    "link": "/guide",
+    "name": "guide",
     "icon": "help-circle"
   },
   {

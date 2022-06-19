@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './payments-page.scss';
-import PageHeader from "../../components/page-header";
+import PageHeader from "../../components/ui/page-header";
 
 const PaymentsPage = () => {
 

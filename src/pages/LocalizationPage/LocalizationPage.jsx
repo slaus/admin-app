@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './localization-page.scss';
-import PageHeader from "../../components/page-header";
+import PageHeader from "../../components/ui/page-header";
 
 const LocalizationPage = () => {
 

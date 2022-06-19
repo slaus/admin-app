@@ -1,4 +1,11 @@
-.help {
+.guide {
+
+  &__title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__item {
     margin-bottom: 10px;
