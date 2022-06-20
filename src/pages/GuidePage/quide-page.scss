@@ -1,12 +1,5 @@
 .guide {
 
-  &__title {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__column {
     flex-direction: column;
     transition: all .5s ease-in-out;

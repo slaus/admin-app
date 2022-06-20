@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 
 import './quide-page.scss';
-import PageHeader from "../../components/ui/page-header";
+import H from "../../components/ui/tag-h";
 import Wrapper from "../../components/ui/wrapper";
 import Box from "../../components/ui/box";
 import Icon from "../../components/ui/icon";
 import Button from "../../components/ui/button";
+import PageHeader from "../../components/ui/page-header";
 
 const GuidePage = ({guideList, guideListLimit}) => {
 
@@ -17,21 +18,19 @@ const GuidePage = ({guideList, guideListLimit}) => {
 
     return (
         <div className="guide">
-            <div className="guide__title">
-                <PageHeader
-                    text="Guide Page"
-                />
+            <PageHeader>
+                <H text="Guide Page"/>
                 <Button success round icon="border-all" onClick={() => setColumn(false)} />
                 <Button success round icon="square" onClick={() => setColumn(true)} />
                 <Button round warning text="add question" />
-            </div>
+            </PageHeader>
             <Wrapper>
                 <div className={`row ${column ? "guide__column" : ""}`}>
                     {
                         guideList.map((block, index) => (
                             <div className={`guide__block col-12 col-md-${column ? 12 : 6} mb`} key={`quide-${index}`}>
                                 <Box>
-                                    <PageHeader Tag="h3" text={block.title}/>
+                                    <H Tag="h3" text={block.title}/>
                                     <ul className="guide__list">
                                         {
                                             block.help.slice(0, Number(guideListLimit)).map((item, index) => (

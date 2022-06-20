@@ -2,7 +2,10 @@ import React from 'react';
 
 import './members-page.scss';
 import Table from "../../components/ui/table";
+import H from "../../components/ui/tag-h";
+import Wrapper from "../../components/ui/wrapper";
 import PageHeader from "../../components/ui/page-header";
+import Search from "../../components/search";
 
 const customerTableHead = [
     '#',
@@ -31,21 +34,24 @@ const renderBody = (item, index) => (
 
 const MembersPage = ({membersList, membersListLimit}) => {
     return (
-        <div className="member-page">
-            <PageHeader
-                text="Members Page"
-            />
-            <div className="row">
-                <div className="col-12">
-                    <Table
-                        membersListLimit={membersListLimit}
-                        headData={customerTableHead}
-                        renderHead={(item, index) => renderHead(item, index)}
-                        bodyData={membersList}
-                        renderBody={(item, index) => renderBody(item, index)}
-                    />
+        <div className="member">
+            <PageHeader>
+                <H text="Members Page"/>
+                <Search />
+            </PageHeader>
+            <Wrapper>
+                <div className="row">
+                    <div className="col-12">
+                        <Table
+                            membersListLimit={membersListLimit}
+                            headData={customerTableHead}
+                            renderHead={(item, index) => renderHead(item, index)}
+                            bodyData={membersList}
+                            renderBody={(item, index) => renderBody(item, index)}
+                        />
+                    </div>
                 </div>
-            </div>
+            </Wrapper>
         </div>
     )
 };

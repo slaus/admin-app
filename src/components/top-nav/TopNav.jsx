@@ -2,7 +2,6 @@ import React from 'react';
 
 import './top-nav.scss';
 import UserInfo from "../user-info";
-import Search from "../search";
 import Dropdown from "../ui/dropdown";
 
 const TopNav = ({data, messagesList}) => {
@@ -13,7 +12,6 @@ const TopNav = ({data, messagesList}) => {
 
     return (
         <div className="topnav">
-            <Search />
             <UserInfo name={data.user.name} img={data.user.img} />
             <Dropdown
                 icon="bell"
